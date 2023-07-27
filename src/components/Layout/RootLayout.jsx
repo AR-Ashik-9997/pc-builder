@@ -16,14 +16,14 @@ const RootLayout = ({ children }) => {
   return (
     <section>
       <nav className="bg-[#eff0ed]">
-        <div className="container mx-auhref px-4 max-w-[90%]">
-          <div className="flex items-center justify-between py-2">
+        <div className="container mx-auto px-4 max-w-[90%]">
+          <div className="flex  items-center justify-between lg:justify-around  gap-4 py-2">
             <div className="flex items-center">
               <Link href="/" className="text-white">
                 <Image src={logo} height={200} width={200} alt="logo" />
               </Link>
             </div>
-            <div className="hidden lg:flex md:items-center">
+            <div className="hidden lg:flex md:items-center px-8">
               <Link
                 href="/"
                 className="text-black mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl  "
