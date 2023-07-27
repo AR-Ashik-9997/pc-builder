@@ -4,9 +4,7 @@ import React from "react";
 const index = () => {
   return (
     <div>
-      <div>
-        <h1>Welcome</h1>
-      </div>
+      <h1 className="text-center text-3xl mt-5">Welcome</h1>
     </div>
   );
 };

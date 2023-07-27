@@ -3,24 +3,22 @@ import React, { useState } from "react";
 import logo from "../../assets/bookWorm.png";
 import Image from "next/image";
 import Footer from "./Footer";
+import { Menu } from "@headlessui/react";
+import Dropdown from "../ui/DropdownCategories";
 const RootLayout = ({ children }) => {
   const [ixsenuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!ixsenuOpen);
   };
+
   return (
     <section>
       <nav className="bg-[#eff0ed]">
         <div className="container mx-auhref px-4 max-w-[90%]">
           <div className="flex items-center justify-between py-2">
             <div className="flex items-center">
-              <Link href="/" className="text-white font-bold text-xl">
-                <Image
-                  className="h-10 md:h-16"
-                  src={logo}
-                  layout="responsive"
-                  alt="logo"
-                />
+              <Link href="/" className="text-white">
+                <Image src={logo} height={200} width={200} alt="logo" />
               </Link>
             </div>
             <div className="hidden lg:flex md:items-center">
@@ -30,13 +28,7 @@ const RootLayout = ({ children }) => {
               >
                 Home
               </Link>
-              <Link
-                href="/all-books"
-                className="text-black mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl  "
-              >
-                Categories
-              </Link>
-
+              <Dropdown />
               <Link
                 href="/addbook"
                 className="text-black mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl  "
@@ -87,12 +79,8 @@ const RootLayout = ({ children }) => {
                 >
                   Home
                 </Link>
-                <Link
-                  href="/all-books"
-                  className="block text-black mt-2 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300"
-                >
-                  Categories
-                </Link>
+
+                <Dropdown />
 
                 <Link
                   href="/addbook"
