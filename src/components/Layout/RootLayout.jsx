@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import logo from "../../assets/bookWorm.png";
 import Image from "next/image";
 import Footer from "./Footer";
-import { Menu } from "@headlessui/react";
 import Dropdown from "../ui/DropdownCategories";
+import { useSession, signIn, signOut } from "next-auth/react";
+
 const RootLayout = ({ children }) => {
+  const { data: session } = useSession();
   const [ixsenuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!ixsenuOpen);
@@ -30,18 +32,28 @@ const RootLayout = ({ children }) => {
               </Link>
               <Dropdown />
               <Link
-                href="/addbook"
+                href="/pcbuilder"
                 className="text-black mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl  "
               >
                 PC Builder
               </Link>
 
-              <Link
-                href="/login"
-                className="text-black mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl  "
-              >
-                Sign-in
-              </Link>
+              {session?.user ? (
+                <button
+                  onClick={() => signOut()}
+                  className="text-black mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl "
+                >
+                  Logout
+                </button>
+              ) : (
+                <Link
+                  href=""
+                  onClick={() => signIn("google")}
+                  className="text-black mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl  "
+                >
+                  Sign-in
+                </Link>
+              )}
             </div>
 
             <div className="lg:hidden">
@@ -83,10 +95,10 @@ const RootLayout = ({ children }) => {
                 <Dropdown />
 
                 <Link
-                  href="/addbook"
+                  href="/pcbuilder"
                   className="block text-black mt-2 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300"
                 >
-                  PC-Builder
+                  PC Builder
                 </Link>
 
                 <Link

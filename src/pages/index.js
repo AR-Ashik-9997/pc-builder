@@ -1,4 +1,5 @@
 import RootLayout from "@/components/Layout/RootLayout";
+import { SessionProvider } from "next-auth/react";
 import React from "react";
 
 const index = () => {
@@ -12,5 +13,9 @@ const index = () => {
 export default index;
 
 index.getLayout = function getLayout(page) {
-  return <RootLayout>{page}</RootLayout>;
+  return (
+    <SessionProvider>
+      <RootLayout>{page}</RootLayout>
+    </SessionProvider>
+  );
 };
