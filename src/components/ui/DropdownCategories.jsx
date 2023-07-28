@@ -28,17 +28,16 @@ const Dropdown = () => {
   }, []);
 
   const dropdownItems = [
-    { id: 1, title: "CPU / Processor", link: "#" },
-    { id: 2, title: "Motherboard", link: "#" },
-    { id: 3, title: "RAM", link: "#" },
-    { id: 4, title: "Power Supply Unit", link: "#" },
-    { id: 5, title: "Storage Device", link: "#" },
-    { id: 6, title: "Monitor", link: "#" },
-    { id: 7, title: "Others", link: "#" },
+    { id: 1, title: "CPU / Processor", link: "/categories/Processor" },
+    { id: 2, title: "Motherboard", link: "/categories/Motherboard" },
+    { id: 3, title: "RAM", link: "/categories/RAM" },
+    { id: 4, title: "Power Supply Unit", link: "/categories/Power Supply" },
+    { id: 5, title: "Storage Device", link: "/categories/Storage" },
+    { id: 6, title: "Monitor", link: "/categories/Monitor" },    
   ];
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative z-10" ref={dropdownRef}>
       <Link
         href=""
         className="text-black lg:mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 lg:text-xl"
