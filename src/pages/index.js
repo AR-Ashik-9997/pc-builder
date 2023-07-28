@@ -23,8 +23,9 @@ index.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/pcbuilderapi");
-  const data = await res.json();  
+  const res = await fetch("http://localhost:5000/all-products");
+  const data = await res.json(); 
+   
   return {
     props: {
       feateuredProducts: data.data,
