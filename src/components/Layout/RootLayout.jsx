@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import logo from "../../assets/bookWorm.png";
+import logo from "../../assets/pc-builder-logo.svg";
 import Image from "next/image";
 import Footer from "./Footer";
 import Dropdown from "../ui/DropdownCategories";
@@ -15,7 +15,7 @@ const RootLayout = ({ children }) => {
 
   return (
     <section>
-      <nav className="bg-[#eff0ed]">
+      <nav className="bg-[#053164]">
         <div className="container mx-auto px-4 max-w-[90%]">
           <div className="flex  items-center justify-between lg:justify-around  gap-4 py-2">
             <div className="flex items-center">
@@ -26,14 +26,14 @@ const RootLayout = ({ children }) => {
             <div className="hidden lg:flex md:items-center px-8">
               <Link
                 href="/"
-                className="text-black mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl  "
+                className="text-white mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl  "
               >
                 Home
               </Link>
               <Dropdown />
               <Link
                 href="/pcbuilder"
-                className="text-black mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl  "
+                className="text-white mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl  "
               >
                 PC Builder
               </Link>
@@ -41,7 +41,7 @@ const RootLayout = ({ children }) => {
               {session?.user ? (
                 <button
                   onClick={() => signOut()}
-                  className="text-black mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl "
+                  className="text-white mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl "
                 >
                   Logout
                 </button>
@@ -49,7 +49,7 @@ const RootLayout = ({ children }) => {
                 <Link
                   href=""
                   onClick={() => signIn("google")}
-                  className="text-black mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl  "
+                  className="text-white mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl  "
                 >
                   Sign-in
                 </Link>
@@ -58,7 +58,7 @@ const RootLayout = ({ children }) => {
 
             <div className="lg:hidden">
               <buthrefn
-                className="text-black focus:outline-none"
+                className="text-white focus:outline-none"
                 onClick={toggleMenu}
               >
                 <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
@@ -87,7 +87,7 @@ const RootLayout = ({ children }) => {
               <div className="mt-2 py-2 px-4">
                 <Link
                   href="/"
-                  className="block text-black mt-2 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300"
+                  className="block text-white mt-2 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300"
                 >
                   Home
                 </Link>
@@ -96,14 +96,14 @@ const RootLayout = ({ children }) => {
 
                 <Link
                   href="/pcbuilder"
-                  className="block text-black mt-2 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300"
+                  className="block text-white mt-2 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300"
                 >
                   PC Builder
                 </Link>
 
                 <Link
                   href="/login"
-                  className="block text-black mt-2 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300"
+                  className="block text-white mt-2 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300"
                 >
                   Sign-in
                 </Link>

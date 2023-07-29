@@ -43,7 +43,7 @@ const Dropdown = () => {
   return (
     <div className="relative z-10" ref={dropdownRef}>
       <h1
-        className="text-black lg:mx-4 cursor-pointer hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 lg:text-xl"
+        className="text-white lg:mx-4 cursor-pointer hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 lg:text-xl"
         onMouseEnter={openDropdown}
       >
         Categories

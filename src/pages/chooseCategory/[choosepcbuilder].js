@@ -4,7 +4,6 @@ import { SessionProvider } from "next-auth/react";
 import React from "react";
 
 const choosepcbuilder = ({ allProduct }) => {
-  console.log(allProduct);
   return (
     <div>
       <PcBuilderCard chooseCategory={allProduct}/>
