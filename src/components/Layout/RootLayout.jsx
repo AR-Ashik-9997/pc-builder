@@ -4,7 +4,7 @@ import logo from "../../assets/pc-builder-logo.svg";
 import Image from "next/image";
 import Footer from "./Footer";
 import Dropdown from "../ui/DropdownCategories";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 
 const RootLayout = ({ children }) => {
   const { data: session } = useSession();
@@ -12,6 +12,7 @@ const RootLayout = ({ children }) => {
   const toggleMenu = () => {
     setMenuOpen(!ixsenuOpen);
   };
+  
 
   return (
     <section>
@@ -47,8 +48,7 @@ const RootLayout = ({ children }) => {
                 </button>
               ) : (
                 <Link
-                  href=""
-                  onClick={() => signIn("google")}
+                  href="/login"
                   className="text-white mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl  "
                 >
                   Sign-in
@@ -101,12 +101,21 @@ const RootLayout = ({ children }) => {
                   PC Builder
                 </Link>
 
-                <Link
-                  href="/login"
-                  className="block text-white mt-2 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300"
-                >
-                  Sign-in
-                </Link>
+                {session?.user ? (
+                  <button
+                    onClick={() => signOut()}
+                    className="text-white mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 text-xl "
+                  >
+                    Logout
+                  </button>
+                ) : (
+                  <Link
+                    href="/login"
+                    className="block text-white mt-2 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300"
+                  >
+                    Sign-in
+                  </Link>
+                )}
               </div>
             </div>
           )}

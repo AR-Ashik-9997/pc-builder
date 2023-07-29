@@ -1,5 +1,5 @@
 import { signIn } from "next-auth/react";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 const GoogleLoginButton = () => {
   useEffect(() => {

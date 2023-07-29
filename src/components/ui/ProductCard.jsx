@@ -1,9 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/router";
 
 const ProductCard = ({ feateuredProducts }) => {
+  const router = useRouter();
   return (
     <section className="pt-24">
       <div className="py-8">
@@ -18,13 +17,16 @@ const ProductCard = ({ feateuredProducts }) => {
             className="max-w-md mx-auto bg-white rounded-xl shadow-xl overflow-hidden"
             key={i}
           >
-            <Link href={`/products/${item?._id}`}>
+            <button
+              onClick={() => router.push(`/products/${item?._id}`)}
+              className="active:scale-95 duration-200"
+            >
               <div className="p-4">
                 <Image
                   src={item?.image}
-                  alt="Product Image"                 
+                  alt="Product Image"
                   height={100}
-                  width={350}                 
+                  width={350}
                 />
               </div>
 
@@ -32,9 +34,12 @@ const ProductCard = ({ feateuredProducts }) => {
                 <h2 className="text-xl font-semibold mb-2">
                   {item?.productName}
                 </h2>
-                <p className="text-gray-500 text-sm mb-2"><span className="font-medium">Category: </span>{item?.category}</p>
+                <p className="text-gray-500 text-sm mb-2">
+                  <span className="font-medium">Category: </span>
+                  {item?.category}
+                </p>
                 <p className="text-green-600 font-bold text-lg mb-2">
-                <span>Price: </span> {item?.price} Tk
+                  <span>Price: </span> {item?.price} Tk
                 </p>
                 <p className="mb-2">
                   <span className="text-gray-600">{item?.status}</span>
@@ -46,7 +51,7 @@ const ProductCard = ({ feateuredProducts }) => {
                   <span className="text-gray-600">{item?.rating}</span>
                 </div>
               </div>
-            </Link>
+            </button>
           </div>
         ))}
       </div>

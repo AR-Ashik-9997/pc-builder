@@ -10,7 +10,8 @@ import gpu from "../../assets/categories/graphic-card.png";
 import mouse from "../../assets/categories/mouse.png";
 import keyboard from "../../assets/categories/keyboard.png";
 import casing from "../../assets/categories/case.png";
-import Link from "next/link";
+import { useRouter } from "next/router";
+
 
 const categories = [
   {
@@ -65,6 +66,7 @@ const categories = [
   },
 ];
 const FeaturedCategories = () => {
+  const router =useRouter();
   return (
     <section>
       <div className="py-8">
@@ -77,7 +79,7 @@ const FeaturedCategories = () => {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4 w-3/4 mx-auto">
         {categories.map((item, i) => (
-          <Link key={i} href={item?.link}>
+          <button onClick={()=>router.push(item?.link)} key={i} className="active:scale-95 duration-200">
             <div
               className="w-full mx-auto bg-white rounded-xl shadow-xl overflow-hidden"              
             >
@@ -96,7 +98,7 @@ const FeaturedCategories = () => {
                 </h2>
               </div>
             </div>
-          </Link>
+          </button>
         ))}
       </div>
     </section>
