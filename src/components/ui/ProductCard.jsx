@@ -32,9 +32,9 @@ const ProductCard = ({ feateuredProducts }) => {
                 <h2 className="text-xl font-semibold mb-2">
                   {item?.productName}
                 </h2>
-                <p className="text-gray-500 text-sm mb-2">{item?.category}</p>
+                <p className="text-gray-500 text-sm mb-2"><span className="font-medium">Category: </span>{item?.category}</p>
                 <p className="text-green-600 font-bold text-lg mb-2">
-                  {item?.price}
+                <span>Price: </span> {item?.price} Tk
                 </p>
                 <p className="mb-2">
                   <span className="text-gray-600">{item?.status}</span>

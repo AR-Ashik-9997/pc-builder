@@ -33,22 +33,21 @@ const Dropdown = () => {
     { id: 3, title: "RAM", link: "/categories/ram" },
     { id: 4, title: "Power Supply Unit", link: "/categories/power" },
     { id: 5, title: "Storage Device", link: "/categories/storage" },
-    { id: 6, title: "Monitor", link: "/categories/monitor" },    
-    { id: 7, title: "GPU", link: "/categories/gpu" },    
-    { id: 8, title: "Mouse", link: "/categories/mouse" },    
-    { id: 9, title: "Keyboard", link: "/categories/keyboard" },    
-    { id: 10, title: "Casing", link: "/categories/casing" },    
+    { id: 6, title: "Monitor", link: "/categories/monitor" },
+    { id: 7, title: "GPU", link: "/categories/gpu" },
+    { id: 8, title: "Mouse", link: "/categories/mouse" },
+    { id: 9, title: "Keyboard", link: "/categories/keyboard" },
+    { id: 10, title: "Casing", link: "/categories/casing" },
   ];
 
   return (
     <div className="relative z-10" ref={dropdownRef}>
-      <Link
-        href=""
-        className="text-black lg:mx-4 hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 lg:text-xl"
-        onMouseEnter={openDropdown}              
+      <h1
+        className="text-black lg:mx-4 cursor-pointer hover:text-white hover:bg-gray-700 px-2 py-1 rounded-lg transition duration-300 lg:text-xl"
+        onMouseEnter={openDropdown}
       >
         Categories
-      </Link>
+      </h1>
       {isOpen && (
         <div className="absolute right-0 mt-2 py-2 w-44 bg-white border border-gray-300 rounded-lg shadow-lg">
           {dropdownItems.map((item) => (
@@ -62,7 +61,6 @@ const Dropdown = () => {
           ))}
         </div>
       )}
-      
     </div>
   );
 };
