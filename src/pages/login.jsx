@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 const GoogleLoginButton = () => {
   useEffect(() => {
-    signIn("google",{callbackUrl:"http://localhost:3000/"});
+    signIn("google",{callbackUrl:"https://pc-builder-ar-ashik-9997.vercel.app"});
   }, []);
 };
 
