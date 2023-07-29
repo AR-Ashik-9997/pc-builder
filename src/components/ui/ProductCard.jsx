@@ -6,10 +6,11 @@ import React from "react";
 const ProductCard = ({ feateuredProducts }) => {
   return (
     <section className="pt-24">
-      <div className="pb-24">
+      <div className="py-8">
         <h1 className="text-center text-xl lg:text-3xl font-semibold">
           Featured Products
         </h1>
+        <p className="text-center">Check & Get Your Desired Product!</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 p-4">
         {feateuredProducts.map((item, i) => (
@@ -18,7 +19,7 @@ const ProductCard = ({ feateuredProducts }) => {
             key={i}
           >
             <Link href={`products/${item?._id}`}>
-              <div>
+              <div className="p-4">
                 <Image
                   src={item?.image}
                   alt="Product Image"                 

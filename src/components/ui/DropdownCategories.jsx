@@ -28,12 +28,16 @@ const Dropdown = () => {
   }, []);
 
   const dropdownItems = [
-    { id: 1, title: "CPU / Processor", link: "/categories/Processor" },
-    { id: 2, title: "Motherboard", link: "/categories/Motherboard" },
-    { id: 3, title: "RAM", link: "/categories/RAM" },
-    { id: 4, title: "Power Supply Unit", link: "/categories/Power Supply" },
-    { id: 5, title: "Storage Device", link: "/categories/Storage" },
-    { id: 6, title: "Monitor", link: "/categories/Monitor" },    
+    { id: 1, title: "CPU / Processor", link: "/categories/processor" },
+    { id: 2, title: "Motherboard", link: "/categories/motherboard" },
+    { id: 3, title: "RAM", link: "/categories/ram" },
+    { id: 4, title: "Power Supply Unit", link: "/categories/power" },
+    { id: 5, title: "Storage Device", link: "/categories/storage" },
+    { id: 6, title: "Monitor", link: "/categories/monitor" },    
+    { id: 7, title: "GPU", link: "/categories/gpu" },    
+    { id: 8, title: "Mouse", link: "/categories/mouse" },    
+    { id: 9, title: "Keyboard", link: "/categories/keyboard" },    
+    { id: 10, title: "Casing", link: "/categories/casing" },    
   ];
 
   return (

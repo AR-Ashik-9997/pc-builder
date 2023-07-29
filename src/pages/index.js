@@ -1,4 +1,5 @@
 import RootLayout from "@/components/Layout/RootLayout";
+import FeaturedCategories from "@/components/ui/FeaturedCategories";
 import ProductCard from "@/components/ui/ProductCard";
 import TopBanner from "@/components/ui/TopBanner";
 import { SessionProvider } from "next-auth/react";
@@ -6,7 +7,8 @@ import { SessionProvider } from "next-auth/react";
 const index = ({ feateuredProducts }) => {
   return (
     <section>
-      <TopBanner />     
+      <TopBanner /> 
+      <FeaturedCategories />    
       <ProductCard feateuredProducts={feateuredProducts} />
     </section>
   );

@@ -124,3 +124,4 @@ export const getStaticProps = async (context) => {
     },
   };
 };
+
