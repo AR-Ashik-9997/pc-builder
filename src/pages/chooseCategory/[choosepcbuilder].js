@@ -24,7 +24,7 @@ choosepcbuilder.getLayout = function getLayout(page) {
 export const getServerSideProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:5000/single-categories/${params.choosepcbuilder}`
+    `https://pc-builder-server-eight.vercel.app/single-categories/${params.choosepcbuilder}`
   );
   const data = await res.json();
   console.log(data);

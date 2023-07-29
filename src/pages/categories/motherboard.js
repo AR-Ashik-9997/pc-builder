@@ -23,7 +23,7 @@ motheboard.getLayout = function getLayout(page) {
   };
   
   export const getStaticProps = async () => {
-      const res = await fetch("http://localhost:5000/single-categories/Motherboard");
+      const res = await fetch("https://pc-builder-server-eight.vercel.app/single-categories/Motherboard");
       const data = await res.json(); 
       return {
         props: {

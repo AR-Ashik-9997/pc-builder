@@ -25,7 +25,7 @@ index.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/limit-products");
+  const res = await fetch("https://pc-builder-server-eight.vercel.app/limit-products");
   const data = await res.json(); 
    
   return {

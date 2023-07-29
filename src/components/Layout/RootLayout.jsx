@@ -5,14 +5,12 @@ import Image from "next/image";
 import Footer from "./Footer";
 import Dropdown from "../ui/DropdownCategories";
 import { useSession, signOut } from "next-auth/react";
-
 const RootLayout = ({ children }) => {
   const { data: session } = useSession();
   const [ixsenuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!ixsenuOpen);
   };
-  
 
   return (
     <section>

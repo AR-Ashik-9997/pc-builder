@@ -22,7 +22,7 @@ mouse.getLayout = function getLayout(page) {
   };
   
   export const getStaticProps = async () => {
-      const res = await fetch("http://localhost:5000/single-categories/Mouse");
+      const res = await fetch("https://pc-builder-server-eight.vercel.app/single-categories/Mouse");
       const data = await res.json(); 
        
       return {
