@@ -3,16 +3,18 @@ import ProductCard from '@/components/ui/ProductCard';
 import { SessionProvider } from 'next-auth/react';
 import React from 'react';
 
-const ram = ({allRam}) => {
+const motheboard = ({allMotherboard}) => {
+    console.log(allMotherboard);
     return (
         <div>
-             <ProductCard feateuredProducts={allRam}/>
+          <ProductCard feateuredProducts={allMotherboard}/>
         </div>
     );
 };
 
-export default ram;
-ram.getLayout = function getLayout(page) {
+export default motheboard;
+
+motheboard.getLayout = function getLayout(page) {
     return (
       <SessionProvider>
         <RootLayout>{page}</RootLayout>
@@ -21,12 +23,11 @@ ram.getLayout = function getLayout(page) {
   };
   
   export const getStaticProps = async () => {
-      const res = await fetch("http://localhost:5000/single-categories/RAM");
+      const res = await fetch("http://localhost:5000/single-categories/Motherboard");
       const data = await res.json(); 
-       
       return {
         props: {
-          allRam: data.data,
+          allMotherboard: data.data,
         },
       };
     };

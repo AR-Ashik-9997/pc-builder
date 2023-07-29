@@ -12,13 +12,13 @@ const ProductCard = ({ feateuredProducts }) => {
         </h1>
         <p className="text-center">Check & Get Your Desired Product!</p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-3/4 mx-auto gap-4 p-4">
         {feateuredProducts.map((item, i) => (
           <div
             className="max-w-md mx-auto bg-white rounded-xl shadow-xl overflow-hidden"
             key={i}
           >
-            <Link href={`products/${item?._id}`}>
+            <Link href={`/products/${item?._id}`}>
               <div className="p-4">
                 <Image
                   src={item?.image}
@@ -34,7 +34,7 @@ const ProductCard = ({ feateuredProducts }) => {
                 </h2>
                 <p className="text-gray-500 text-sm mb-2">{item?.category}</p>
                 <p className="text-green-600 font-bold text-lg mb-2">
-                  {item?.Price}
+                  {item?.price}
                 </p>
                 <p className="mb-2">
                   <span className="text-gray-600">{item?.status}</span>
