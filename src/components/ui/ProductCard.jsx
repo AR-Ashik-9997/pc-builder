@@ -44,11 +44,10 @@ const ProductCard = ({ feateuredProducts }) => {
                 <p className="mb-2">
                   <span className="text-gray-600">{item?.status}</span>
                 </p>
-                <div className="flex items-center">
+                <div className="flex items-center justify-center">
                   <span className="text-yellow-500 mr-1">
                     &#9733;&#9733;&#9733;&#9733;&#9733;
-                  </span>
-                  <span className="text-gray-600">{item?.rating}</span>
+                  </span>                 
                 </div>
               </div>
             </button>
