@@ -1,38 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Live-Link: https://pc-builder-lake.vercel.app/
 
-## Getting Started
+# PC Builder Application
 
-First, run the development server:
+The PC Builder Application is a user-friendly tool that helps users customize and build their own personal computers based on their specific needs and preferences. Whether you are a gamer, a content creator, or simply looking for a powerful workstation, this application makes it easy to select the right components and build your dream PC.
+
+## Features
+
+1. **Component Selection**: The application allows users to choose from a wide range of components, including CPUs, GPUs, motherboards, RAM, storage devices, power supplies, and computer cases. Each component is categorized and comes with detailed specifications, making it simple for users to compare and select the best options.
+
+2. **Compatibility Check**: One of the most critical aspects of building a PC is ensuring that all the selected components are compatible with each other. The PC Builder Application automatically performs compatibility checks, alerting users if there are any potential issues with their chosen components.
+
+
+4. **Saved Configurations**: The application allows users to save their custom PC configurations for future reference. Users can create multiple configurations and easily switch between them to compare different setups.
+
+
+6. **Share and Export Configurations**: Users can share their custom PC configurations with friends, family, or on social media. Additionally, they can export the selected components as a shopping list to make the purchasing process more convenient.
+
+## How to Run the Project
+
+To run the PC Builder Application on your local machine, follow the steps below:
+
+### Prerequisites
+
+1. Make sure you have Node.js and npm (Node Package Manager) installed on your computer. You can download the latest version of Node.js from the official website: https://nodejs.org/
+
+2. You will need a code editor like Visual Studio Code, Sublime Text, or any other of your choice.
+
+### Installation
+
+1. Clone the project repository from GitHub to your local machine using Git or download the ZIP file and extract it.
+
+2. Open your terminal or command prompt and navigate to the project directory.
+
+3. Install the project dependencies by running the following command:
+
+```bash
+npm install
+```
+
+### Configuration
+
+1. Once you have the API keys, create a `.env` file in the project's root directory.
+
+2. Inside the `.env` file, add the API keys in the following format:
+
+```env
+NEXTAUTH_SECRET=secret_key
+NEXTAUTH_URL=http://localhost:3000
+GOOGLE_CLIENT_ID=GOOGLE_CLIENT_ID
+GOOGLE_CLIENT_SECRET=GOOGLE_CLIENT_SECRET
+```
+
+### Running the Application
+
+With all the dependencies and configurations in place, you can now run the PC Builder Application. Use the following command:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application should now be running on your local machine. Open your web browser and navigate to `http://localhost:3000` to access the PC Builder Application.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Usage
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+1. Browse through the available components and click on the ones you want to add to your configuration.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+2. The application will automatically check for component compatibility and provide alerts for any issues.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Save your configurations by creating an account or logging in.
 
-## Learn More
+7. Enjoy building your perfect PC!
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you find any issues or have suggestions for improvements, feel free to create a pull request or open an issue on our GitHub repository.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Happy PC building! 🖥️💻
