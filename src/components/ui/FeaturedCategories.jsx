@@ -77,7 +77,7 @@ const FeaturedCategories = () => {
           Get Your Desired Product from Featured Category!
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4 w-3/4 mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3  xl:grid-cols-4 gap-4 p-4 w-3/4 mx-auto">
         {categories.map((item, i) => (
           <button onClick={()=>router.push(item?.link)} key={i} className="active:scale-95 duration-200">
             <div
