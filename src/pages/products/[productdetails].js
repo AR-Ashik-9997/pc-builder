@@ -30,7 +30,7 @@ const productdetails = ({ singleProduct }) => {
 
             <h3 className="text-lg font-semibold mb-2">
               Price:{" "}
-              <span className="text-green-600">{singleProduct?.price}</span>
+              <span className="text-green-600">{singleProduct?.price} Tk</span>
             </h3>
             <h3 className="text-lg font-semibold mb-2">
               Status: <span>{singleProduct?.status}</span>
